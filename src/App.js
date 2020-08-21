@@ -1,25 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { ThemeProvider, createMuiTheme } from '@material-ui/core';
+
+// Una buena práctica es agrupar las cosas que importo . En las lineas superiores importe cosas de librerías instaladas al proyecto
+// Debajo tengo componentes que cree yo.
+
+import NavBar from './components/NavBar';
+import Home from './components/Home';
+
+const theme = createMuiTheme({ // Configuracion de un tema de materialui - cada librería tiene su manera de hacer esto. esto es a modo de ejemplo
+  palette: {
+    primary: {
+      main: '#FF5722',
+    }
+  },
+  typography: {
+    fontFamily: 'monospace',
+  }
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <ThemeProvider theme={theme} >
+      <CssBaseline />
+      <header>
+        <NavBar /> 
+        {/* Todo componente que cree y quiero mostrar debo importarlo y llamarlo con su Tag. 
+          Para diferenciar y porque originalmente son clases, los componentes react se escriben con mayusculas, 
+          header y main, son tags html , y estan en minusculas.
+        */}
       </header>
-    </div>
+      <main>
+        <Home greeting="Hello World !" /> 
+      </main>
+
+    </ThemeProvider>
   );
 }
 

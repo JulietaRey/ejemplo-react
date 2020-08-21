@@ -1,0 +1,30 @@
+.nav-bar {
+  display: flex;
+  height: 40px;
+  justify-content: space-between;
+  background: #f5caca;
+  padding: 0 20px;
+  align-items: center;
+  box-shadow: 1px 4px 3px 1px #d4d0d0;
+  & > div.item-container {
+    height: 100%;
+  }
+  & > div {
+    // & se usa para referirse al elemento sobre el cual se vienen aplicando los estilos.
+    // en este caso, elementos que tengan la clase nav-bar
+    button {
+      width: 150px;
+      border: none;
+      background: none;
+      height: 100%;
+      text-transform: capitalize;
+      cursor: pointer;
+      font-family: monospace;
+      border-bottom: 4px solid #f5caca;
+      &:hover {
+        background: #f4baba;
+        border-bottom: 4px solid black;
+      }
+    }
+  }
+}
