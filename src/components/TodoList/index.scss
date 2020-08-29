@@ -1,0 +1,38 @@
+div.todo-list-container {
+  background: rgb(195, 195, 195);
+  margin: 20px 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  & > div {
+    margin: 20px;
+    background: white;
+    padding: 30px;
+    border: 1px solid black;
+    & > div.create-task > form > div {
+      display:flex;
+      flex-direction: column;
+      margin: 20px 0;
+      & > label {
+        font-weight: bold;
+      }
+    }
+    & > div.task-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      & > div {
+        padding: 20px;
+        font-size: 14px;
+        box-shadow: 4px 4px 7px 0px #b4b4b4;
+        border: 0.5px solid black;
+        margin: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & > * {
+          margin: 5px;
+        }
+      }
+    }
+  }
+}
