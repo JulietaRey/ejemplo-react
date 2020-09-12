@@ -8,11 +8,12 @@ import { ThemeProvider, createMuiTheme } from '@material-ui/core';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import TodoList from './components/TodoList';
+import MovieRatings from './components/MovieRatings';
 
 const theme = createMuiTheme({ // Configuracion de un tema de materialui - cada librería tiene su manera de hacer esto. esto es a modo de ejemplo
   palette: {
     primary: {
-      main: '#FF5722',
+      main: '#cd2498',
     }
   },
   typography: {
@@ -33,7 +34,8 @@ function App() {
       </header>
       <main>
         {/* <Home greeting="Hello World !" /> */}
-        <TodoList />
+        {/* <TodoList /> */}
+        <MovieRatings />
       </main>
 
     </ThemeProvider>

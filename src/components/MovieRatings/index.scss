@@ -1,0 +1,20 @@
+div.movie-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 25px;
+}
+
+div.image {
+  height: 200px;
+}
+
+div.movies {
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  div.input-container {
+    margin: 20px 0;
+    width: 50%;
+  }
+}
